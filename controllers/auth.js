@@ -28,7 +28,7 @@ router.post('/login', function(req, res) {
         res.send({ token });
     })
     .catch(err => {
-        console.log(`ERROR on /login POST attempt: ${error}`);
+        console.log(`ERROR on /login POST attempt: ${err}`);
         res.status(503).send({ message: "Incorrect login attempt. Check db and credentials." });
     })
 })
